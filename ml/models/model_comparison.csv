@@ -1,0 +1,4 @@
+model_name,accuracy,f1_macro,roc_auc
+LogisticRegression,0.726,0.6991,0.9152
+RandomForest,0.7085,0.6754,0.9071
+XGBoost,0.7195,0.6716,0.9168

@@ -1,0 +1,13 @@
+feature,importance
+family_history,3.485983
+smoking,1.656699
+activity_level,1.152624
+age,1.02436
+bmi,0.763632
+alcohol,0.694457
+pollution,0.617889
+diet,0.609513
+psa,0.562627
+sleep_hours,0.466332
+psa_density,0.332355
+region,0.077921

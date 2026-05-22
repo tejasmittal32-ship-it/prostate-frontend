@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #0284c7;
+  --color-brand-light: #38bdf8;
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-inter), sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 selection:bg-[#38bdf8] selection:text-white;
+  }
+}
+
+@layer components {
+  /* Premium Frosted Glass Effect tailored for Light Mode */
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-2xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.03)] rounded-2xl;
+  }
+
+  /* Deep inputs for UI interactions */
+  .input-light {
+    @apply bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8] transition-all;
+  }
+  
+  .input-dark {
+    @apply bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8] transition-all;
+  }
+
+  .btn-3d-primary {
+    @apply relative bg-gradient-to-b from-[#38bdf8] to-[#0284c7] hover:from-[#7dd3fc] hover:to-[#0369a1] 
+           text-white transition-all duration-200 shadow-[0_4px_10px_rgba(2,132,199,0.3)] border border-[#0284c7];
+  }
+}
+
+/* Base chart override for Recharts since we are in Light Mode */
+.recharts-text {
+  fill: #64748b !important;
+}
+.recharts-cartesian-grid-line {
+  stroke: #e2e8f0 !important;
+}
